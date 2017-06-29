@@ -1,4 +1,8 @@
-from setuptools import setup
+"""
+Setup for rpi-greenthumb module
+"""
+
+from setuptools import setup, find_packages
 
 setup(
     name='rpi-greenthumb',
@@ -7,6 +11,9 @@ setup(
     url='https://github.com/jpmec/rpi-greenthumb',
     author='Joshua Petitt',
     license='MIT',
-    packages=['rpi_greenthumb'],
-    zip_safe=False
+    packages=find_packages(exclude=['*tests*']),
+    zip_safe=False,
+    keywords=[
+        "raspberry pi"
+    ]
 )
